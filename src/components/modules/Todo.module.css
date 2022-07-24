@@ -1,0 +1,20 @@
+.todoContent {
+  width: 736px;
+
+  margin-top: 4rem;
+}
+
+.infoTaks {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+
+  color: #4EA8DE;
+}
+
+.infoTaks .doneTasks, .createdTasks{
+  display: flex;
+  text-align: justify;
+  justify-content: space-between;
+  align-items: center;
+}

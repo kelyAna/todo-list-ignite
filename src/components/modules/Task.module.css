@@ -4,6 +4,7 @@
 
   display: flex;
 
+  margin-bottom: 10px;
   margin-top: calc(0px - 3.1rem - 8px);
 
   align-items: center;
