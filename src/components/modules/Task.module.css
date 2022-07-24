@@ -1,0 +1,51 @@
+.taskForm {
+  width: 736px;
+  height: 54px;
+
+  display: flex;
+
+  margin-top: calc(0px - 3.1rem - 8px);
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.taskForm textarea{
+  width: 638px;
+  height: 53px;
+
+  background: var(--gray-500);
+
+  border: 1px solid var(--gray-700);
+  resize: none;
+
+  padding: 1rem;
+  border-radius: 8px;
+
+  color: var(--gray-300);
+  line-height: 1.4;
+
+  overflow: hidden;
+}
+
+.taskForm button {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  gap: 8px;
+
+  width: 90px;
+  height: 52px;
+
+  background: #1E6F9F;
+  border-radius: 8px;
+  border: 0;
+  color: var(--white);
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
