@@ -1,6 +1,24 @@
 
 .emptyContent {
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   display: flex;
+}
+
+.emptyDivider {
+  margin-top: 24px;
+  margin-bottom: 64px;
+  border-top: 1px solid  var(--gray-300);
+  border-radius: 50%;
+  width: 736px;
+}
+
+.emptyInfo {
+  margin-top: 16px;
+  text-align: center;
+  color: var(--gray-300);
+}
+
+.emptyInfo p:first-child {
+  font-weight: bold;
 }
