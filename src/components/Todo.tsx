@@ -1,6 +1,7 @@
 import { Counter } from './Counter'
 import { Empty } from './Empty'
 import styles from './modules/Todo.module.css'
+import { TodoList } from './TodoList'
 
 export function Todo() {
   return(
@@ -16,7 +17,7 @@ export function Todo() {
         </div>
       </div>
       <div className={styles.tasksContent}>
-        <Empty />
+        <TodoList />
       </div>
     </div>
   )
