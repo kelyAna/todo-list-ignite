@@ -2,19 +2,31 @@ import styles from './modules/TodoList.module.css'
 
 import iconTrash from '../assets/trash.svg'
 
-export function TodoList(){
+export type TodoListProps = {
+  tasksList: string[]
+  onDeleteTask: (task: string) => void
+}
+
+export function TodoList({ tasksList, onDeleteTask }: TodoListProps){
+
     return (
-        <div className={styles.todoListContent}>
-            <div className={styles.todoListTask}>
-                <label className={styles.todoItemList}>
-                  <input type="checkbox" />
-                  <span className={styles.checkmark}></span>
-                </label>
-                <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
-                <button type="submit">
-                  <img src={iconTrash} alt=""/>
-                </button>
-            </div>
+        <div >
+            {tasksList.map((task) => {
+                return (
+                  <div className={styles.todoListContent}>
+                      <div className={styles.todoListTask}>
+                      <label className={styles.todoItemList}>
+                        <input type="checkbox" />
+                        <span className={styles.checkmark}></span>
+                      </label>
+                      <p>{task}</p>
+                      <button type="submit" onClick={() => onDeleteTask(task)}>
+                        <img src={iconTrash} alt=""/>
+                      </button>
+                     </div>
+                 </div>
+              )
+            })}
         </div>
     )
 }

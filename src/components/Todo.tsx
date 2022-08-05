@@ -1,9 +1,9 @@
 import { Counter } from './Counter'
 import { Empty } from './Empty'
 import styles from './modules/Todo.module.css'
-import { TodoList } from './TodoList'
+import { TodoList, TodoListProps } from './TodoList'
 
-export function Todo() {
+export function Todo({ tasksList, onDeleteTask }: TodoListProps) {
   return(
     <div className={styles.todoContent}>
       <div className={styles.infoTaks}>
@@ -16,9 +16,11 @@ export function Todo() {
           <Counter />
         </div>
       </div>
-      <div className={styles.tasksContent}>
-        <TodoList />
-      </div>
+     {
+      tasksList.length !== 0 ? <div className={styles.tasksContent}>
+      <TodoList tasksList={tasksList} onDeleteTask={onDeleteTask} />
+      </div> : <Empty />
+     }
     </div>
   )
 }

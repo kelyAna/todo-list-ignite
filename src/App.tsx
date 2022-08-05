@@ -11,9 +11,6 @@ function App() {
 
       <div className={styles.wrapper}>
         <Task />
-        <div>
-          <Todo />
-        </div>
       </div>  
     </div>
   )
