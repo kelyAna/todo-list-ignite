@@ -33,8 +33,6 @@ export function Task(){
     setTasks(taskWithoutDeleteOne)
   }
 
-  console.log(tasks)
-
   return (
     <div>
       <form className={styles.taskForm}>
@@ -54,7 +52,7 @@ export function Task(){
         </footer>
       </form>
 
-      <Todo tasksList={tasks} onDeleteTask={deleteTask} />
+      <Todo tasksList={tasks} onDeleteTask={deleteTask} countTasks={tasks.length} onMarkTaskAsCompleted={() => alert('test')} className={''} />
     </div>
   )
 }

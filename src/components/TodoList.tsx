@@ -5,10 +5,11 @@ import iconTrash from '../assets/trash.svg'
 export type TodoListProps = {
   tasksList: string[]
   onDeleteTask: (task: string) => void
+  onMarkTaskAsCompleted: () => void
+  className: string
 }
 
-export function TodoList({ tasksList, onDeleteTask }: TodoListProps){
-
+export function TodoList({ tasksList, onDeleteTask, onMarkTaskAsCompleted, className }: TodoListProps){
     return (
         <div >
             {tasksList.map((task) => {
@@ -17,9 +18,9 @@ export function TodoList({ tasksList, onDeleteTask }: TodoListProps){
                       <div className={styles.todoListTask}>
                       <label className={styles.todoItemList}>
                         <input type="checkbox" />
-                        <span className={styles.checkmark}></span>
+                        <span className={styles.checkmark} onClick={onMarkTaskAsCompleted}></span>
                       </label>
-                      <p>{task}</p>
+                      <p className={className}>{task}</p>
                       <button type="submit" onClick={() => onDeleteTask(task)}>
                         <img src={iconTrash} alt=""/>
                       </button>
